@@ -453,10 +453,11 @@ Get-Content logs/agent_$(Get-Date -Format "yyyyMMdd").log
 
 This project is created for educational purposes as part of the COMP7103C course assignment.
 
-## 👥 Authors
+## 👥 Author
 
-Multi-agent system implementation for Code Agent Building project.
+Pan Jiayun 3036655306
 
 ---
 
 **For detailed system design, challenges, and results analysis, please refer to the Project Report (PDF).**
+
