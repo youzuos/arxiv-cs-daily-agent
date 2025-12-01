@@ -1,0 +1,1 @@
+Drafted homepage structure with navigation, hero, categories, and feed.

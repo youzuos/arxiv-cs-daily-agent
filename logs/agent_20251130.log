@@ -1,0 +1,265 @@
+2025-11-30 16:30:18 | INFO | tools.llm_client:__init__:27 - LLMClient initialized with model: doubao-1-5-pro-32k-250115, base_url: https://ark.cn-beijing.volces.com/api/v3
+2025-11-30 16:30:22 | INFO | tools.llm_client:__init__:27 - LLMClient initialized with model: doubao-1-5-pro-32k-250115, base_url: https://ark.cn-beijing.volces.com/api/v3
+2025-11-30 16:30:31 | INFO | tools.llm_client:__init__:27 - LLMClient initialized with model: doubao-1-5-pro-32k-250115, base_url: https://ark.cn-beijing.volces.com/api/v3
+2025-11-30 16:33:10 | INFO | tools.llm_client:__init__:27 - LLMClient initialized with model: doubao-1-5-pro-32k-250115, base_url: https://ark.cn-beijing.volces.com/api/v3
+2025-11-30 16:33:10 | INFO | agents.planning_agent:think:27 - PlanningAgent received brief from user
+2025-11-30 16:33:10 | DEBUG | agents.planning_agent:_draft_plan:39 - Drafting plan for requirement: test
+2025-11-30 16:33:10 | DEBUG | agents.planning_agent:think:34 - Planner produced 4 tasks
+2025-11-30 16:33:10 | INFO | orchestrator.orchestrator:bootstrap:33 - Planner populated 4 tasks
+2025-11-30 16:33:10 | INFO | orchestrator.orchestrator:run:49 - Dispatching plan-frontend to code_generation
+2025-11-30 16:33:10 | INFO | agents.code_generation_agent:think:16 - CodeGenerationAgent handling task: plan-frontend
+2025-11-30 16:33:10 | DEBUG | agents.code_generation_agent:_execute_task:25 - Executing instruction: Create navigation, hero, categories, and feed sections that mirror the reference mockups.
+2025-11-30 16:33:10 | DEBUG | agents.base_agent:dispatch_tool:39 - coder invoking tool file_manager
+2025-11-30 16:33:10 | DEBUG | tools.file_manager:run:19 - FileManager write -> D:\Campus\HKU\data mining\a1\arxiv-cs-daily-agent\logs\plan-frontend.md
+2025-11-30 16:33:10 | INFO | agents.code_generation_agent:_execute_task:38 - Applied write on logs/plan-frontend.md -> written
+2025-11-30 16:33:10 | INFO | orchestrator.orchestrator:run:49 - Dispatching plan-data to code_generation
+2025-11-30 16:33:10 | INFO | agents.code_generation_agent:think:16 - CodeGenerationAgent handling task: plan-data
+2025-11-30 16:33:10 | DEBUG | agents.code_generation_agent:_execute_task:25 - Executing instruction: Implement data fetcher/mock JSON to hydrate homepage + detail pages.
+2025-11-30 16:33:10 | INFO | agents.code_generation_agent:_execute_task:55 - 🚀 Attempting LLM generation for frontend/src/data/papers.json
+2025-11-30 16:33:10 | DEBUG | agents.base_agent:dispatch_tool:39 - coder invoking tool llm_client
+2025-11-30 16:33:10 | INFO | tools.llm_client:run:30 - 🤖 Calling LLM (doubao-1-5-pro-32k-250115) with prompt length: 225 chars
+2025-11-30 16:33:13 | ERROR | tools.llm_client:run:44 - ❌ LLM call failed: RateLimitError: Error code: 429 - {'error': {'code': 'SetLimitExceeded', 'message': 'Your account [2112449717] has reached the set inference limit for the [doubao-1-5-pro-32k] model, and the model service has been paused. To continue using this model, please visit the Model Activation page to adjust or close the "Safe Experience Mode". Request id: 021764491591699780ac04783713ec7230a7ae890013a31f2e0e7', 'param': '', 'type': 'TooManyRequests'}}
+2025-11-30 16:33:13 | WARNING | agents.code_generation_agent:_execute_task:62 - LLM call failed: Error code: 429 - {'error': {'code': 'SetLimitExceeded', 'message': 'Your account [2112449717] has reached the set inference limit for the [doubao-1-5-pro-32k] model, and the model service has been paused. To continue using this model, please visit the Model Activation page to adjust or close the "Safe Experience Mode". Request id: 021764491591699780ac04783713ec7230a7ae890013a31f2e0e7', 'param': '', 'type': 'TooManyRequests'}}. Falling back to script method.
+2025-11-30 16:33:13 | DEBUG | agents.base_agent:dispatch_tool:39 - coder invoking tool command_executor
+2025-11-30 16:33:13 | DEBUG | tools.command_executor:run:19 - Running command: python scripts/generate_mock_papers.py
+2025-11-30 16:33:13 | INFO | agents.code_generation_agent:_execute_task:65 - Fallback script executed: python scripts/generate_mock_papers.py -> code 0
+2025-11-30 16:33:13 | INFO | orchestrator.orchestrator:run:49 - Dispatching plan-detail-page to code_generation
+2025-11-30 16:33:13 | INFO | agents.code_generation_agent:think:16 - CodeGenerationAgent handling task: plan-detail-page
+2025-11-30 16:33:13 | DEBUG | agents.code_generation_agent:_execute_task:25 - Executing instruction: Create PDF link, metadata, citation copy buttons.
+2025-11-30 16:33:13 | DEBUG | agents.base_agent:dispatch_tool:39 - coder invoking tool command_executor
+2025-11-30 16:33:13 | DEBUG | tools.command_executor:run:19 - Running command: python scripts/generate_detail_page.py
+2025-11-30 16:33:13 | INFO | agents.code_generation_agent:_execute_task:46 - Executed script python scripts/generate_detail_page.py -> code 0
+2025-11-30 16:33:13 | INFO | orchestrator.orchestrator:run:49 - Dispatching plan-tests to code_evaluation
+2025-11-30 16:33:13 | INFO | agents.code_evaluation_agent:think:17 - CodeEvaluationAgent running npm run build --prefix frontend
+2025-11-30 16:33:13 | DEBUG | agents.base_agent:dispatch_tool:39 - evaluator invoking tool command_executor
+2025-11-30 16:33:13 | DEBUG | tools.command_executor:run:19 - Running command: npm run build --prefix frontend
+2025-11-30 16:38:38 | INFO | tools.llm_client:__init__:27 - LLMClient initialized with model: doubao-1-5-pro-32k-250115, base_url: https://ark.cn-beijing.volces.com/api/v3
+2025-11-30 16:38:38 | INFO | agents.planning_agent:think:27 - PlanningAgent received brief from user
+2025-11-30 16:38:38 | DEBUG | agents.planning_agent:_draft_plan:39 - Drafting plan for requirement: test new LLM
+2025-11-30 16:38:38 | DEBUG | agents.planning_agent:think:34 - Planner produced 4 tasks
+2025-11-30 16:38:38 | INFO | orchestrator.orchestrator:bootstrap:33 - Planner populated 4 tasks
+2025-11-30 16:38:38 | INFO | orchestrator.orchestrator:run:49 - Dispatching plan-frontend to code_generation
+2025-11-30 16:38:38 | INFO | agents.code_generation_agent:think:16 - CodeGenerationAgent handling task: plan-frontend
+2025-11-30 16:38:38 | DEBUG | agents.code_generation_agent:_execute_task:25 - Executing instruction: Create navigation, hero, categories, and feed sections that mirror the reference mockups.
+2025-11-30 16:38:38 | DEBUG | agents.base_agent:dispatch_tool:39 - coder invoking tool file_manager
+2025-11-30 16:38:38 | DEBUG | tools.file_manager:run:19 - FileManager write -> D:\Campus\HKU\data mining\a1\arxiv-cs-daily-agent\logs\plan-frontend.md
+2025-11-30 16:38:38 | INFO | agents.code_generation_agent:_execute_task:38 - Applied write on logs/plan-frontend.md -> written
+2025-11-30 16:38:38 | INFO | orchestrator.orchestrator:run:49 - Dispatching plan-data to code_generation
+2025-11-30 16:38:38 | INFO | agents.code_generation_agent:think:16 - CodeGenerationAgent handling task: plan-data
+2025-11-30 16:38:38 | DEBUG | agents.code_generation_agent:_execute_task:25 - Executing instruction: Implement data fetcher/mock JSON to hydrate homepage + detail pages.
+2025-11-30 16:38:38 | INFO | agents.code_generation_agent:_execute_task:55 - 🚀 Attempting LLM generation for frontend/src/data/papers.json
+2025-11-30 16:38:38 | DEBUG | agents.base_agent:dispatch_tool:39 - coder invoking tool llm_client
+2025-11-30 16:38:38 | INFO | tools.llm_client:run:30 - 🤖 Calling LLM (doubao-1-5-pro-32k-250115) with prompt length: 225 chars
+2025-11-30 16:38:41 | ERROR | tools.llm_client:run:44 - ❌ LLM call failed: RateLimitError: Error code: 429 - {'error': {'code': 'SetLimitExceeded', 'message': 'Your account [2112449717] has reached the set inference limit for the [doubao-1-5-pro-32k] model, and the model service has been paused. To continue using this model, please visit the Model Activation page to adjust or close the "Safe Experience Mode". Request id: 021764491919822f4da2aacaf5fabcaeb2f8732a286980fc602fb', 'param': '', 'type': 'TooManyRequests'}}
+2025-11-30 16:38:41 | WARNING | agents.code_generation_agent:_execute_task:62 - LLM call failed: Error code: 429 - {'error': {'code': 'SetLimitExceeded', 'message': 'Your account [2112449717] has reached the set inference limit for the [doubao-1-5-pro-32k] model, and the model service has been paused. To continue using this model, please visit the Model Activation page to adjust or close the "Safe Experience Mode". Request id: 021764491919822f4da2aacaf5fabcaeb2f8732a286980fc602fb', 'param': '', 'type': 'TooManyRequests'}}. Falling back to script method.
+2025-11-30 16:38:41 | DEBUG | agents.base_agent:dispatch_tool:39 - coder invoking tool command_executor
+2025-11-30 16:38:41 | DEBUG | tools.command_executor:run:19 - Running command: python scripts/generate_mock_papers.py
+2025-11-30 16:38:41 | INFO | agents.code_generation_agent:_execute_task:65 - Fallback script executed: python scripts/generate_mock_papers.py -> code 0
+2025-11-30 16:38:41 | INFO | orchestrator.orchestrator:run:49 - Dispatching plan-detail-page to code_generation
+2025-11-30 16:38:41 | INFO | agents.code_generation_agent:think:16 - CodeGenerationAgent handling task: plan-detail-page
+2025-11-30 16:38:41 | DEBUG | agents.code_generation_agent:_execute_task:25 - Executing instruction: Create PDF link, metadata, citation copy buttons.
+2025-11-30 16:38:41 | DEBUG | agents.base_agent:dispatch_tool:39 - coder invoking tool command_executor
+2025-11-30 16:38:41 | DEBUG | tools.command_executor:run:19 - Running command: python scripts/generate_detail_page.py
+2025-11-30 16:38:41 | INFO | agents.code_generation_agent:_execute_task:46 - Executed script python scripts/generate_detail_page.py -> code 0
+2025-11-30 16:38:41 | INFO | orchestrator.orchestrator:run:49 - Dispatching plan-tests to code_evaluation
+2025-11-30 16:38:41 | INFO | agents.code_evaluation_agent:think:17 - CodeEvaluationAgent running npm run build --prefix frontend
+2025-11-30 16:38:41 | DEBUG | agents.base_agent:dispatch_tool:39 - evaluator invoking tool command_executor
+2025-11-30 16:38:41 | DEBUG | tools.command_executor:run:19 - Running command: npm run build --prefix frontend
+2025-11-30 16:39:45 | INFO | tools.llm_client:__init__:27 - LLMClient initialized with model: deepseek, base_url: https://api.deepseek.com
+2025-11-30 16:39:45 | INFO | agents.planning_agent:think:27 - PlanningAgent received brief from user
+2025-11-30 16:39:45 | DEBUG | agents.planning_agent:_draft_plan:39 - Drafting plan for requirement: test deepseek LLM
+2025-11-30 16:39:45 | DEBUG | agents.planning_agent:think:34 - Planner produced 4 tasks
+2025-11-30 16:39:45 | INFO | orchestrator.orchestrator:bootstrap:33 - Planner populated 4 tasks
+2025-11-30 16:39:45 | INFO | orchestrator.orchestrator:run:49 - Dispatching plan-frontend to code_generation
+2025-11-30 16:39:45 | INFO | agents.code_generation_agent:think:16 - CodeGenerationAgent handling task: plan-frontend
+2025-11-30 16:39:45 | DEBUG | agents.code_generation_agent:_execute_task:25 - Executing instruction: Create navigation, hero, categories, and feed sections that mirror the reference mockups.
+2025-11-30 16:39:45 | DEBUG | agents.base_agent:dispatch_tool:39 - coder invoking tool file_manager
+2025-11-30 16:39:45 | DEBUG | tools.file_manager:run:19 - FileManager write -> D:\Campus\HKU\data mining\a1\arxiv-cs-daily-agent\logs\plan-frontend.md
+2025-11-30 16:39:45 | INFO | agents.code_generation_agent:_execute_task:38 - Applied write on logs/plan-frontend.md -> written
+2025-11-30 16:39:45 | INFO | orchestrator.orchestrator:run:49 - Dispatching plan-data to code_generation
+2025-11-30 16:39:45 | INFO | agents.code_generation_agent:think:16 - CodeGenerationAgent handling task: plan-data
+2025-11-30 16:39:45 | DEBUG | agents.code_generation_agent:_execute_task:25 - Executing instruction: Implement data fetcher/mock JSON to hydrate homepage + detail pages.
+2025-11-30 16:39:45 | INFO | agents.code_generation_agent:_execute_task:55 - 🚀 Attempting LLM generation for frontend/src/data/papers.json
+2025-11-30 16:39:45 | DEBUG | agents.base_agent:dispatch_tool:39 - coder invoking tool llm_client
+2025-11-30 16:39:45 | INFO | tools.llm_client:run:30 - 🤖 Calling LLM (deepseek) with prompt length: 225 chars
+2025-11-30 16:39:46 | ERROR | tools.llm_client:run:44 - ❌ LLM call failed: BadRequestError: Error code: 400 - {'error': {'message': 'Model Not Exist', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_request_error'}}
+2025-11-30 16:39:46 | WARNING | agents.code_generation_agent:_execute_task:62 - LLM call failed: Error code: 400 - {'error': {'message': 'Model Not Exist', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_request_error'}}. Falling back to script method.
+2025-11-30 16:39:46 | DEBUG | agents.base_agent:dispatch_tool:39 - coder invoking tool command_executor
+2025-11-30 16:39:46 | DEBUG | tools.command_executor:run:19 - Running command: python scripts/generate_mock_papers.py
+2025-11-30 16:39:46 | INFO | agents.code_generation_agent:_execute_task:65 - Fallback script executed: python scripts/generate_mock_papers.py -> code 0
+2025-11-30 16:39:46 | INFO | orchestrator.orchestrator:run:49 - Dispatching plan-detail-page to code_generation
+2025-11-30 16:39:46 | INFO | agents.code_generation_agent:think:16 - CodeGenerationAgent handling task: plan-detail-page
+2025-11-30 16:39:46 | DEBUG | agents.code_generation_agent:_execute_task:25 - Executing instruction: Create PDF link, metadata, citation copy buttons.
+2025-11-30 16:39:46 | DEBUG | agents.base_agent:dispatch_tool:39 - coder invoking tool command_executor
+2025-11-30 16:39:46 | DEBUG | tools.command_executor:run:19 - Running command: python scripts/generate_detail_page.py
+2025-11-30 16:39:46 | INFO | agents.code_generation_agent:_execute_task:46 - Executed script python scripts/generate_detail_page.py -> code 0
+2025-11-30 16:39:46 | INFO | orchestrator.orchestrator:run:49 - Dispatching plan-tests to code_evaluation
+2025-11-30 16:39:46 | INFO | agents.code_evaluation_agent:think:17 - CodeEvaluationAgent running npm run build --prefix frontend
+2025-11-30 16:39:46 | DEBUG | agents.base_agent:dispatch_tool:39 - evaluator invoking tool command_executor
+2025-11-30 16:39:46 | DEBUG | tools.command_executor:run:19 - Running command: npm run build --prefix frontend
+2025-11-30 16:41:09 | INFO | tools.llm_client:__init__:27 - LLMClient initialized with model: deepseek1, base_url: https://api.deepseek.com
+2025-11-30 16:41:09 | INFO | agents.planning_agent:think:27 - PlanningAgent received brief from user
+2025-11-30 16:41:09 | DEBUG | agents.planning_agent:_draft_plan:39 - Drafting plan for requirement: test deepseek1
+2025-11-30 16:41:09 | DEBUG | agents.planning_agent:think:34 - Planner produced 4 tasks
+2025-11-30 16:41:09 | INFO | orchestrator.orchestrator:bootstrap:33 - Planner populated 4 tasks
+2025-11-30 16:41:09 | INFO | orchestrator.orchestrator:run:49 - Dispatching plan-frontend to code_generation
+2025-11-30 16:41:09 | INFO | agents.code_generation_agent:think:16 - CodeGenerationAgent handling task: plan-frontend
+2025-11-30 16:41:09 | DEBUG | agents.code_generation_agent:_execute_task:25 - Executing instruction: Create navigation, hero, categories, and feed sections that mirror the reference mockups.
+2025-11-30 16:41:09 | DEBUG | agents.base_agent:dispatch_tool:39 - coder invoking tool file_manager
+2025-11-30 16:41:09 | DEBUG | tools.file_manager:run:19 - FileManager write -> D:\Campus\HKU\data mining\a1\arxiv-cs-daily-agent\logs\plan-frontend.md
+2025-11-30 16:41:09 | INFO | agents.code_generation_agent:_execute_task:38 - Applied write on logs/plan-frontend.md -> written
+2025-11-30 16:41:09 | INFO | orchestrator.orchestrator:run:49 - Dispatching plan-data to code_generation
+2025-11-30 16:41:09 | INFO | agents.code_generation_agent:think:16 - CodeGenerationAgent handling task: plan-data
+2025-11-30 16:41:09 | DEBUG | agents.code_generation_agent:_execute_task:25 - Executing instruction: Implement data fetcher/mock JSON to hydrate homepage + detail pages.
+2025-11-30 16:41:09 | INFO | agents.code_generation_agent:_execute_task:55 - 🚀 Attempting LLM generation for frontend/src/data/papers.json
+2025-11-30 16:41:09 | DEBUG | agents.base_agent:dispatch_tool:39 - coder invoking tool llm_client
+2025-11-30 16:41:09 | INFO | tools.llm_client:run:30 - 🤖 Calling LLM (deepseek1) with prompt length: 225 chars
+2025-11-30 16:41:10 | ERROR | tools.llm_client:run:44 - ❌ LLM call failed: BadRequestError: Error code: 400 - {'error': {'message': 'Model Not Exist', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_request_error'}}
+2025-11-30 16:41:10 | WARNING | agents.code_generation_agent:_execute_task:62 - LLM call failed: Error code: 400 - {'error': {'message': 'Model Not Exist', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_request_error'}}. Falling back to script method.
+2025-11-30 16:41:10 | DEBUG | agents.base_agent:dispatch_tool:39 - coder invoking tool command_executor
+2025-11-30 16:41:10 | DEBUG | tools.command_executor:run:19 - Running command: python scripts/generate_mock_papers.py
+2025-11-30 16:41:10 | INFO | agents.code_generation_agent:_execute_task:65 - Fallback script executed: python scripts/generate_mock_papers.py -> code 0
+2025-11-30 16:41:10 | INFO | orchestrator.orchestrator:run:49 - Dispatching plan-detail-page to code_generation
+2025-11-30 16:41:10 | INFO | agents.code_generation_agent:think:16 - CodeGenerationAgent handling task: plan-detail-page
+2025-11-30 16:41:10 | DEBUG | agents.code_generation_agent:_execute_task:25 - Executing instruction: Create PDF link, metadata, citation copy buttons.
+2025-11-30 16:41:10 | DEBUG | agents.base_agent:dispatch_tool:39 - coder invoking tool command_executor
+2025-11-30 16:41:10 | DEBUG | tools.command_executor:run:19 - Running command: python scripts/generate_detail_page.py
+2025-11-30 16:41:10 | INFO | agents.code_generation_agent:_execute_task:46 - Executed script python scripts/generate_detail_page.py -> code 0
+2025-11-30 16:41:10 | INFO | orchestrator.orchestrator:run:49 - Dispatching plan-tests to code_evaluation
+2025-11-30 16:41:10 | INFO | agents.code_evaluation_agent:think:17 - CodeEvaluationAgent running npm run build --prefix frontend
+2025-11-30 16:41:10 | DEBUG | agents.base_agent:dispatch_tool:39 - evaluator invoking tool command_executor
+2025-11-30 16:41:10 | DEBUG | tools.command_executor:run:19 - Running command: npm run build --prefix frontend
+2025-11-30 16:44:28 | INFO | tools.llm_client:__init__:27 - LLMClient initialized with model: deepseek1, base_url: https://api.deepseek.com
+2025-11-30 16:44:28 | INFO | agents.planning_agent:think:27 - PlanningAgent received brief from user
+2025-11-30 16:44:28 | DEBUG | agents.planning_agent:_draft_plan:39 - Drafting plan for requirement: test deepseek-chat
+2025-11-30 16:44:28 | DEBUG | agents.planning_agent:think:34 - Planner produced 4 tasks
+2025-11-30 16:44:28 | INFO | orchestrator.orchestrator:bootstrap:33 - Planner populated 4 tasks
+2025-11-30 16:44:28 | INFO | orchestrator.orchestrator:run:49 - Dispatching plan-frontend to code_generation
+2025-11-30 16:44:28 | INFO | agents.code_generation_agent:think:16 - CodeGenerationAgent handling task: plan-frontend
+2025-11-30 16:44:28 | DEBUG | agents.code_generation_agent:_execute_task:25 - Executing instruction: Create navigation, hero, categories, and feed sections that mirror the reference mockups.
+2025-11-30 16:44:28 | DEBUG | agents.base_agent:dispatch_tool:39 - coder invoking tool file_manager
+2025-11-30 16:44:28 | DEBUG | tools.file_manager:run:19 - FileManager write -> D:\Campus\HKU\data mining\a1\arxiv-cs-daily-agent\logs\plan-frontend.md
+2025-11-30 16:44:28 | INFO | agents.code_generation_agent:_execute_task:38 - Applied write on logs/plan-frontend.md -> written
+2025-11-30 16:44:28 | INFO | orchestrator.orchestrator:run:49 - Dispatching plan-data to code_generation
+2025-11-30 16:44:28 | INFO | agents.code_generation_agent:think:16 - CodeGenerationAgent handling task: plan-data
+2025-11-30 16:44:28 | DEBUG | agents.code_generation_agent:_execute_task:25 - Executing instruction: Implement data fetcher/mock JSON to hydrate homepage + detail pages.
+2025-11-30 16:44:28 | INFO | agents.code_generation_agent:_execute_task:55 - 🚀 Attempting LLM generation for frontend/src/data/papers.json
+2025-11-30 16:44:28 | DEBUG | agents.base_agent:dispatch_tool:39 - coder invoking tool llm_client
+2025-11-30 16:44:28 | INFO | tools.llm_client:run:30 - 🤖 Calling LLM (deepseek1) with prompt length: 225 chars
+2025-11-30 16:44:28 | ERROR | tools.llm_client:run:44 - ❌ LLM call failed: BadRequestError: Error code: 400 - {'error': {'message': 'Model Not Exist', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_request_error'}}
+2025-11-30 16:44:28 | WARNING | agents.code_generation_agent:_execute_task:62 - LLM call failed: Error code: 400 - {'error': {'message': 'Model Not Exist', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_request_error'}}. Falling back to script method.
+2025-11-30 16:44:28 | DEBUG | agents.base_agent:dispatch_tool:39 - coder invoking tool command_executor
+2025-11-30 16:44:28 | DEBUG | tools.command_executor:run:19 - Running command: python scripts/generate_mock_papers.py
+2025-11-30 16:44:28 | INFO | agents.code_generation_agent:_execute_task:65 - Fallback script executed: python scripts/generate_mock_papers.py -> code 0
+2025-11-30 16:44:28 | INFO | orchestrator.orchestrator:run:49 - Dispatching plan-detail-page to code_generation
+2025-11-30 16:44:28 | INFO | agents.code_generation_agent:think:16 - CodeGenerationAgent handling task: plan-detail-page
+2025-11-30 16:44:28 | DEBUG | agents.code_generation_agent:_execute_task:25 - Executing instruction: Create PDF link, metadata, citation copy buttons.
+2025-11-30 16:44:28 | DEBUG | agents.base_agent:dispatch_tool:39 - coder invoking tool command_executor
+2025-11-30 16:44:28 | DEBUG | tools.command_executor:run:19 - Running command: python scripts/generate_detail_page.py
+2025-11-30 16:44:28 | INFO | agents.code_generation_agent:_execute_task:46 - Executed script python scripts/generate_detail_page.py -> code 0
+2025-11-30 16:44:28 | INFO | orchestrator.orchestrator:run:49 - Dispatching plan-tests to code_evaluation
+2025-11-30 16:44:28 | INFO | agents.code_evaluation_agent:think:17 - CodeEvaluationAgent running npm run build --prefix frontend
+2025-11-30 16:44:28 | DEBUG | agents.base_agent:dispatch_tool:39 - evaluator invoking tool command_executor
+2025-11-30 16:44:28 | DEBUG | tools.command_executor:run:19 - Running command: npm run build --prefix frontend
+2025-11-30 16:45:23 | INFO | tools.llm_client:__init__:27 - LLMClient initialized with model: deepseek-chat, base_url: https://api.deepseek.com
+2025-11-30 16:45:23 | INFO | agents.planning_agent:think:27 - PlanningAgent received brief from user
+2025-11-30 16:45:23 | DEBUG | agents.planning_agent:_draft_plan:39 - Drafting plan for requirement: test deepseek-chat fixed
+2025-11-30 16:45:23 | DEBUG | agents.planning_agent:think:34 - Planner produced 4 tasks
+2025-11-30 16:45:23 | INFO | orchestrator.orchestrator:bootstrap:33 - Planner populated 4 tasks
+2025-11-30 16:45:23 | INFO | orchestrator.orchestrator:run:49 - Dispatching plan-frontend to code_generation
+2025-11-30 16:45:23 | INFO | agents.code_generation_agent:think:16 - CodeGenerationAgent handling task: plan-frontend
+2025-11-30 16:45:23 | DEBUG | agents.code_generation_agent:_execute_task:25 - Executing instruction: Create navigation, hero, categories, and feed sections that mirror the reference mockups.
+2025-11-30 16:45:23 | DEBUG | agents.base_agent:dispatch_tool:39 - coder invoking tool file_manager
+2025-11-30 16:45:23 | DEBUG | tools.file_manager:run:19 - FileManager write -> D:\Campus\HKU\data mining\a1\arxiv-cs-daily-agent\logs\plan-frontend.md
+2025-11-30 16:45:23 | INFO | agents.code_generation_agent:_execute_task:38 - Applied write on logs/plan-frontend.md -> written
+2025-11-30 16:45:23 | INFO | orchestrator.orchestrator:run:49 - Dispatching plan-data to code_generation
+2025-11-30 16:45:23 | INFO | agents.code_generation_agent:think:16 - CodeGenerationAgent handling task: plan-data
+2025-11-30 16:45:23 | DEBUG | agents.code_generation_agent:_execute_task:25 - Executing instruction: Implement data fetcher/mock JSON to hydrate homepage + detail pages.
+2025-11-30 16:45:23 | INFO | agents.code_generation_agent:_execute_task:55 - 🚀 Attempting LLM generation for frontend/src/data/papers.json
+2025-11-30 16:45:23 | DEBUG | agents.base_agent:dispatch_tool:39 - coder invoking tool llm_client
+2025-11-30 16:45:23 | INFO | tools.llm_client:run:30 - 🤖 Calling LLM (deepseek-chat) with prompt length: 225 chars
+2025-11-30 16:45:51 | INFO | tools.llm_client:run:41 - ✅ LLM call successful. Response length: 2865 chars
+2025-11-30 16:45:51 | DEBUG | agents.base_agent:dispatch_tool:39 - coder invoking tool file_manager
+2025-11-30 16:45:51 | DEBUG | tools.file_manager:run:19 - FileManager write -> D:\Campus\HKU\data mining\a1\arxiv-cs-daily-agent\frontend\src\data\papers.json
+2025-11-30 16:45:51 | INFO | agents.code_generation_agent:_execute_task:59 - ✅ LLM generated content successfully written to frontend/src/data/papers.json
+2025-11-30 16:45:51 | INFO | orchestrator.orchestrator:run:49 - Dispatching plan-detail-page to code_generation
+2025-11-30 16:45:51 | INFO | agents.code_generation_agent:think:16 - CodeGenerationAgent handling task: plan-detail-page
+2025-11-30 16:45:51 | DEBUG | agents.code_generation_agent:_execute_task:25 - Executing instruction: Create PDF link, metadata, citation copy buttons.
+2025-11-30 16:45:51 | DEBUG | agents.base_agent:dispatch_tool:39 - coder invoking tool command_executor
+2025-11-30 16:45:51 | DEBUG | tools.command_executor:run:19 - Running command: python scripts/generate_detail_page.py
+2025-11-30 16:45:51 | INFO | agents.code_generation_agent:_execute_task:46 - Executed script python scripts/generate_detail_page.py -> code 0
+2025-11-30 16:45:51 | INFO | orchestrator.orchestrator:run:49 - Dispatching plan-tests to code_evaluation
+2025-11-30 16:45:51 | INFO | agents.code_evaluation_agent:think:17 - CodeEvaluationAgent running npm run build --prefix frontend
+2025-11-30 16:45:51 | DEBUG | agents.base_agent:dispatch_tool:39 - evaluator invoking tool command_executor
+2025-11-30 16:45:51 | DEBUG | tools.command_executor:run:19 - Running command: npm run build --prefix frontend
+2025-11-30 16:46:31 | INFO | tools.llm_client:__init__:27 - LLMClient initialized with model: deepseek-chat, base_url: https://api.deepseek.com
+2025-11-30 16:46:31 | INFO | agents.planning_agent:think:27 - PlanningAgent received brief from user
+2025-11-30 16:46:31 | DEBUG | agents.planning_agent:_draft_plan:39 - Drafting plan for requirement: final test
+2025-11-30 16:46:31 | DEBUG | agents.planning_agent:think:34 - Planner produced 4 tasks
+2025-11-30 16:46:31 | INFO | orchestrator.orchestrator:bootstrap:33 - Planner populated 4 tasks
+2025-11-30 16:46:31 | INFO | orchestrator.orchestrator:run:49 - Dispatching plan-frontend to code_generation
+2025-11-30 16:46:31 | INFO | agents.code_generation_agent:think:16 - CodeGenerationAgent handling task: plan-frontend
+2025-11-30 16:46:31 | DEBUG | agents.code_generation_agent:_execute_task:25 - Executing instruction: Create navigation, hero, categories, and feed sections that mirror the reference mockups.
+2025-11-30 16:46:31 | DEBUG | agents.base_agent:dispatch_tool:39 - coder invoking tool file_manager
+2025-11-30 16:46:31 | DEBUG | tools.file_manager:run:19 - FileManager write -> D:\Campus\HKU\data mining\a1\arxiv-cs-daily-agent\logs\plan-frontend.md
+2025-11-30 16:46:31 | INFO | agents.code_generation_agent:_execute_task:38 - Applied write on logs/plan-frontend.md -> written
+2025-11-30 16:46:31 | INFO | orchestrator.orchestrator:run:49 - Dispatching plan-data to code_generation
+2025-11-30 16:46:31 | INFO | agents.code_generation_agent:think:16 - CodeGenerationAgent handling task: plan-data
+2025-11-30 16:46:31 | DEBUG | agents.code_generation_agent:_execute_task:25 - Executing instruction: Implement data fetcher/mock JSON to hydrate homepage + detail pages.
+2025-11-30 16:46:31 | INFO | agents.code_generation_agent:_execute_task:55 - 🚀 Attempting LLM generation for frontend/src/data/papers.json
+2025-11-30 16:46:31 | DEBUG | agents.base_agent:dispatch_tool:39 - coder invoking tool llm_client
+2025-11-30 16:46:31 | INFO | tools.llm_client:run:30 - 🤖 Calling LLM (deepseek-chat) with prompt length: 225 chars
+2025-11-30 16:47:00 | INFO | tools.llm_client:run:41 - ✅ LLM call successful. Response length: 3091 chars
+2025-11-30 16:47:00 | DEBUG | agents.base_agent:dispatch_tool:39 - coder invoking tool file_manager
+2025-11-30 16:47:00 | DEBUG | tools.file_manager:run:19 - FileManager write -> D:\Campus\HKU\data mining\a1\arxiv-cs-daily-agent\frontend\src\data\papers.json
+2025-11-30 16:47:00 | INFO | agents.code_generation_agent:_execute_task:59 - ✅ LLM generated content successfully written to frontend/src/data/papers.json
+2025-11-30 16:47:00 | INFO | orchestrator.orchestrator:run:49 - Dispatching plan-detail-page to code_generation
+2025-11-30 16:47:00 | INFO | agents.code_generation_agent:think:16 - CodeGenerationAgent handling task: plan-detail-page
+2025-11-30 16:47:00 | DEBUG | agents.code_generation_agent:_execute_task:25 - Executing instruction: Create PDF link, metadata, citation copy buttons.
+2025-11-30 16:47:00 | DEBUG | agents.base_agent:dispatch_tool:39 - coder invoking tool command_executor
+2025-11-30 16:47:00 | DEBUG | tools.command_executor:run:19 - Running command: python scripts/generate_detail_page.py
+2025-11-30 16:47:00 | INFO | agents.code_generation_agent:_execute_task:46 - Executed script python scripts/generate_detail_page.py -> code 0
+2025-11-30 16:47:00 | INFO | orchestrator.orchestrator:run:49 - Dispatching plan-tests to code_evaluation
+2025-11-30 16:47:00 | INFO | agents.code_evaluation_agent:think:17 - CodeEvaluationAgent running npm run build --prefix frontend
+2025-11-30 16:47:00 | DEBUG | agents.base_agent:dispatch_tool:39 - evaluator invoking tool command_executor
+2025-11-30 16:47:00 | DEBUG | tools.command_executor:run:19 - Running command: npm run build --prefix frontend
+2025-11-30 19:24:54 | INFO | tools.llm_client:__init__:27 - LLMClient initialized with model: deepseek-chat, base_url: https://api.deepseek.com
+2025-11-30 19:29:02 | INFO | tools.llm_client:__init__:27 - LLMClient initialized with model: deepseek-chat, base_url: https://api.deepseek.com
+2025-11-30 19:30:44 | INFO | tools.llm_client:__init__:27 - LLMClient initialized with model: deepseek-chat, base_url: https://api.deepseek.com
+2025-11-30 19:30:58 | INFO | tools.llm_client:__init__:27 - LLMClient initialized with model: deepseek-chat, base_url: https://api.deepseek.com
+2025-11-30 19:30:58 | INFO | agents.planning_agent:think:27 - PlanningAgent received brief from user
+2025-11-30 19:30:58 | DEBUG | agents.planning_agent:_draft_plan:39 - Drafting plan for requirement: generate 15 unique papers
+2025-11-30 19:30:58 | DEBUG | agents.planning_agent:think:34 - Planner produced 4 tasks
+2025-11-30 19:30:58 | INFO | orchestrator.orchestrator:bootstrap:33 - Planner populated 4 tasks
+2025-11-30 19:30:58 | INFO | orchestrator.orchestrator:run:49 - Dispatching plan-frontend to code_generation
+2025-11-30 19:30:58 | INFO | agents.code_generation_agent:think:16 - CodeGenerationAgent handling task: plan-frontend
+2025-11-30 19:30:58 | DEBUG | agents.code_generation_agent:_execute_task:25 - Executing instruction: Create navigation, hero, categories, and feed sections that mirror the reference mockups.
+2025-11-30 19:30:58 | DEBUG | agents.base_agent:dispatch_tool:39 - coder invoking tool file_manager
+2025-11-30 19:30:58 | DEBUG | tools.file_manager:run:19 - FileManager write -> D:\Campus\HKU\data mining\a1\arxiv-cs-daily-agent\logs\plan-frontend.md
+2025-11-30 19:30:58 | INFO | agents.code_generation_agent:_execute_task:38 - Applied write on logs/plan-frontend.md -> written
+2025-11-30 19:30:58 | INFO | orchestrator.orchestrator:run:49 - Dispatching plan-data to code_generation
+2025-11-30 19:30:58 | INFO | agents.code_generation_agent:think:16 - CodeGenerationAgent handling task: plan-data
+2025-11-30 19:30:58 | DEBUG | agents.code_generation_agent:_execute_task:25 - Executing instruction: Implement data fetcher/mock JSON to hydrate homepage + detail pages.
+2025-11-30 19:30:58 | INFO | agents.code_generation_agent:_execute_task:55 - 🚀 Attempting LLM generation for frontend/src/data/papers.json
+2025-11-30 19:30:58 | DEBUG | agents.base_agent:dispatch_tool:39 - coder invoking tool llm_client
+2025-11-30 19:30:58 | INFO | tools.llm_client:run:30 - 🤖 Calling LLM (deepseek-chat) with prompt length: 559 chars
+2025-11-30 19:31:08 | INFO | tools.llm_client:__init__:27 - LLMClient initialized with model: deepseek-chat, base_url: https://api.deepseek.com
+2025-11-30 19:32:10 | INFO | tools.llm_client:run:41 - ✅ LLM call successful. Response length: 7801 chars
+2025-11-30 19:32:10 | DEBUG | agents.base_agent:dispatch_tool:39 - coder invoking tool file_manager
+2025-11-30 19:32:10 | DEBUG | tools.file_manager:run:19 - FileManager write -> D:\Campus\HKU\data mining\a1\arxiv-cs-daily-agent\frontend\src\data\papers.json
+2025-11-30 19:32:10 | INFO | agents.code_generation_agent:_execute_task:91 - ✅ LLM generated 15 unique papers written to frontend/src/data/papers.json
+2025-11-30 19:32:10 | INFO | orchestrator.orchestrator:run:49 - Dispatching plan-detail-page to code_generation
+2025-11-30 19:32:10 | INFO | agents.code_generation_agent:think:16 - CodeGenerationAgent handling task: plan-detail-page
+2025-11-30 19:32:10 | DEBUG | agents.code_generation_agent:_execute_task:25 - Executing instruction: Create PDF link, metadata, citation copy buttons.
+2025-11-30 19:32:10 | DEBUG | agents.base_agent:dispatch_tool:39 - coder invoking tool command_executor
+2025-11-30 19:32:10 | DEBUG | tools.command_executor:run:19 - Running command: python scripts/generate_detail_page.py
+2025-11-30 19:32:10 | INFO | agents.code_generation_agent:_execute_task:46 - Executed script python scripts/generate_detail_page.py -> code 0
+2025-11-30 19:32:10 | INFO | orchestrator.orchestrator:run:49 - Dispatching plan-tests to code_evaluation
+2025-11-30 19:32:10 | INFO | agents.code_evaluation_agent:think:17 - CodeEvaluationAgent running npm run build --prefix frontend
+2025-11-30 19:32:10 | DEBUG | agents.base_agent:dispatch_tool:39 - evaluator invoking tool command_executor
+2025-11-30 19:32:10 | DEBUG | tools.command_executor:run:19 - Running command: npm run build --prefix frontend
+2025-11-30 19:33:24 | INFO | tools.llm_client:__init__:27 - LLMClient initialized with model: deepseek-chat, base_url: https://api.deepseek.com
+2025-11-30 20:06:00 | INFO | tools.llm_client:__init__:27 - LLMClient initialized with model: deepseek-chat, base_url: https://api.deepseek.com
+2025-11-30 20:10:04 | INFO | tools.llm_client:__init__:27 - LLMClient initialized with model: deepseek-chat, base_url: https://api.deepseek.com
+2025-11-30 20:11:29 | INFO | tools.llm_client:__init__:27 - LLMClient initialized with model: deepseek-chat, base_url: https://api.deepseek.com
+2025-11-30 20:12:04 | INFO | tools.llm_client:__init__:27 - LLMClient initialized with model: deepseek-chat, base_url: https://api.deepseek.com
