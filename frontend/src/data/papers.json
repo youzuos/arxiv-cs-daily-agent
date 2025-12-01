@@ -1,0 +1,247 @@
+[
+  {
+    "id": "2512.10000",
+    "title": "Efficient Neural Architecture Search via Multi-Objective Optimization",
+    "authors": [
+      "Alice Zhang",
+      "Ben Carter",
+      "Chloe Davis"
+    ],
+    "submittedAt": "2025-12-01",
+    "abstract": "This paper introduces a novel neural architecture search framework that balances model accuracy and computational efficiency. Our method achieves state-of-the-art results on multiple benchmark datasets while reducing search time by 40%.",
+    "categories": [
+      "cs.AI",
+      "cs.LG"
+    ],
+    "pdfUrl": "https://arxiv.org/pdf/2512.10000.pdf"
+  },
+  {
+    "id": "2510.10001",
+    "title": "Cross-Modal Retrieval with Vision-Language Transformers",
+    "authors": [
+      "David Lee",
+      "Emma Wilson",
+      "Frank Miller",
+      "Grace Brown"
+    ],
+    "submittedAt": "2025-10-01",
+    "abstract": "We propose a transformer-based approach for cross-modal retrieval between images and text. The model demonstrates significant improvements in retrieval accuracy across three standard benchmarks compared to previous methods.",
+    "categories": [
+      "cs.CV",
+      "cs.CL"
+    ],
+    "pdfUrl": "https://arxiv.org/pdf/2510.10001.pdf"
+  },
+  {
+    "id": "2510.10002",
+    "title": "Hardware-Aware Pruning for Efficient Edge Deployment",
+    "authors": [
+      "Henry Taylor",
+      "Ivy Chen",
+      "Jack Robinson"
+    ],
+    "submittedAt": "2025-10-27",
+    "abstract": "This work presents a hardware-aware pruning technique that optimizes neural networks for edge devices. Experimental results show 3x speedup on mobile CPUs without sacrificing accuracy.",
+    "categories": [
+      "cs.AR",
+      "cs.LG"
+    ],
+    "pdfUrl": "https://arxiv.org/pdf/2510.10002.pdf"
+  },
+  {
+    "id": "2511.10003",
+    "title": "Multimodal Sentiment Analysis Using Graph Neural Networks",
+    "authors": [
+      "Karen White",
+      "Leo Garcia",
+      "Mia Johnson",
+      "Nathan Kim"
+    ],
+    "submittedAt": "2025-11-26",
+    "abstract": "We develop a graph neural network framework for multimodal sentiment analysis that integrates text, audio, and visual features. Our approach outperforms existing methods on two challenging sentiment analysis datasets.",
+    "categories": [
+      "cs.CL",
+      "cs.LG"
+    ],
+    "pdfUrl": "https://arxiv.org/pdf/2511.10003.pdf"
+  },
+  {
+    "id": "2509.10004",
+    "title": "Federated Learning with Differential Privacy Guarantees",
+    "authors": [
+      "Olivia Park",
+      "Paul Singh",
+      "Quinn Adams"
+    ],
+    "submittedAt": "2025-09-25",
+    "abstract": "This paper introduces a federated learning framework with rigorous differential privacy guarantees. We demonstrate practical privacy-utility tradeoffs across multiple distributed learning scenarios.",
+    "categories": [
+      "cs.LG",
+      "cs.CR"
+    ],
+    "pdfUrl": "https://arxiv.org/pdf/2509.10004.pdf"
+  },
+  {
+    "id": "2509.10005",
+    "title": "Real-Time Object Detection for Autonomous Vehicles",
+    "authors": [
+      "Rachel Green",
+      "Sam Patel",
+      "Tina Wong",
+      "Uma Rao"
+    ],
+    "submittedAt": "2025-09-15",
+    "abstract": "We present a real-time object detection system optimized for autonomous vehicle applications. The method achieves 95% accuracy while maintaining 30 FPS on embedded hardware.",
+    "categories": [
+      "cs.CV",
+      "cs.RO"
+    ],
+    "pdfUrl": "https://arxiv.org/pdf/2509.10005.pdf"
+  },
+  {
+    "id": "2511.10006",
+    "title": "Quantum-Inspired Optimization for Machine Learning",
+    "authors": [
+      "Victor Chen",
+      "Wendy Li",
+      "Xavier Wang"
+    ],
+    "submittedAt": "2025-11-07",
+    "abstract": "This research explores quantum-inspired optimization algorithms for training deep neural networks. Our approach shows faster convergence and better generalization compared to classical optimizers.",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "pdfUrl": "https://arxiv.org/pdf/2511.10006.pdf"
+  },
+  {
+    "id": "2510.10007",
+    "title": "Neural Machine Translation with Few-Shot Adaptation",
+    "authors": [
+      "Yara Hassan",
+      "Zoe Martinez",
+      "Adam Klein"
+    ],
+    "submittedAt": "2025-10-19",
+    "abstract": "We propose a few-shot adaptation method for neural machine translation that requires minimal target language data. The approach achieves competitive performance across 10 language pairs with only 100 examples.",
+    "categories": [
+      "cs.CL"
+    ],
+    "pdfUrl": "https://arxiv.org/pdf/2510.10007.pdf"
+  },
+  {
+    "id": "2509.10008",
+    "title": "Energy-Efficient Computer Vision on Mobile Devices",
+    "authors": [
+      "Bella Scott",
+      "Carlos Ruiz",
+      "Diana Lee",
+      "Ethan Moore"
+    ],
+    "submittedAt": "2025-09-12",
+    "abstract": "This work introduces energy-efficient computer vision algorithms specifically designed for mobile devices. Our methods reduce energy consumption by 60% while maintaining competitive accuracy on vision tasks.",
+    "categories": [
+      "cs.CV",
+      "cs.AR"
+    ],
+    "pdfUrl": "https://arxiv.org/pdf/2509.10008.pdf"
+  },
+  {
+    "id": "2510.10009",
+    "title": "Self-Supervised Learning for Medical Image Analysis",
+    "authors": [
+      "Fiona Zhang",
+      "George Harris",
+      "Hannah Kim"
+    ],
+    "submittedAt": "2025-10-15",
+    "abstract": "We develop a self-supervised learning framework for medical image analysis that reduces annotation requirements. The method achieves state-of-the-art performance on three medical imaging datasets.",
+    "categories": [
+      "cs.AI",
+      "cs.HC"
+    ],
+    "pdfUrl": "https://arxiv.org/pdf/2510.10009.pdf"
+  },
+  {
+    "id": "2509.10010",
+    "title": "Robust Natural Language Understanding with Adversarial Training",
+    "authors": [
+      "Ian Thompson",
+      "Julia Adams",
+      "Kevin Brown",
+      "Lily Chen"
+    ],
+    "submittedAt": "2025-09-15",
+    "abstract": "This paper presents an adversarial training approach for robust natural language understanding. Our method improves model robustness against various textual attacks while maintaining performance on clean data.",
+    "categories": [
+      "cs.AR",
+      "cs.LG"
+    ],
+    "pdfUrl": "https://arxiv.org/pdf/2509.10010.pdf"
+  },
+  {
+    "id": "2511.10011",
+    "title": "Hardware Acceleration for Graph Neural Networks",
+    "authors": [
+      "Michael Wong",
+      "Nina Patel",
+      "Oscar Garcia"
+    ],
+    "submittedAt": "2025-11-10",
+    "abstract": "We design a specialized hardware accelerator for graph neural networks that achieves 5x speedup over GPU implementations. The architecture efficiently handles irregular graph structures common in real-world applications.",
+    "categories": [
+      "cs.CV",
+      "cs.LG"
+    ],
+    "pdfUrl": "https://arxiv.org/pdf/2511.10011.pdf"
+  },
+  {
+    "id": "2510.10012",
+    "title": "Multi-Agent Reinforcement Learning for Resource Allocation",
+    "authors": [
+      "Paula Rodriguez",
+      "Quincy Jones",
+      "Rita Singh"
+    ],
+    "submittedAt": "2025-10-18",
+    "abstract": "This research explores multi-agent reinforcement learning for dynamic resource allocation in cloud computing environments. Our approach improves resource utilization by 25% compared to traditional schedulers.",
+    "categories": [
+      "cs.CL",
+      "cs.LG"
+    ],
+    "pdfUrl": "https://arxiv.org/pdf/2510.10012.pdf"
+  },
+  {
+    "id": "2510.10013",
+    "title": "Explainable AI for Clinical Decision Support",
+    "authors": [
+      "Sarah Johnson",
+      "Tom Wilson",
+      "Uma Patel",
+      "Vincent Lee"
+    ],
+    "submittedAt": "2025-10-19",
+    "abstract": "We develop an explainable AI system for clinical decision support that provides interpretable predictions. The framework helps clinicians understand model reasoning while maintaining high diagnostic accuracy.",
+    "categories": [
+      "cs.AI",
+      "cs.DC"
+    ],
+    "pdfUrl": "https://arxiv.org/pdf/2510.10013.pdf"
+  },
+  {
+    "id": "2509.10014",
+    "title": "Efficient Transformers for Long Document Processing",
+    "authors": [
+      "William Chen",
+      "Yvonne Martin",
+      "Zachary Brown"
+    ],
+    "submittedAt": "2025-09-25",
+    "abstract": "This paper introduces an efficient transformer architecture for processing long documents. Our method reduces memory requirements by 70% while maintaining performance on document understanding tasks.",
+    "categories": [
+      "cs.CL",
+      "cs.LG"
+    ],
+    "pdfUrl": "https://arxiv.org/pdf/2509.10014.pdf"
+  }
+]
